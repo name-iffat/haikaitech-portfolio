@@ -223,7 +223,7 @@ const App: React.FC = () => {
                                     STATUS: ONLINE
                                 </span>
                                 <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-                                    Ready to build something <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-yellow-500 font-hand italic">real?</span>
+                                    Ready to build something <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-yellow-500 font-hand italic">real? '</span>
                                 </h2>
                                 <p className="text-slate-400 text-xl max-w-md mx-auto md:mx-0 mb-8 font-light">
                                     Drop me a line for collaborations, freelance work, or just to share your favorite VS Code theme.
@@ -264,11 +264,6 @@ const App: React.FC = () => {
                     <div className="flex items-center gap-2">
                         <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                         &copy; {new Date().getFullYear()} HaikaiTech
-                    </div>
-                    <div className="flex gap-6">
-                        <span className="hover:text-slate-600 cursor-pointer transition-colors">Github</span>
-                        <span className="hover:text-slate-600 cursor-pointer transition-colors">LinkedIn</span>
-                        <span className="hover:text-slate-600 cursor-pointer transition-colors">Resume</span>
                     </div>
                 </footer>
 
