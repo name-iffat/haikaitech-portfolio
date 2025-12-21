@@ -18,6 +18,17 @@ import React from 'react';
 
 export const PROJECTS: Project[] = [
   {
+    id: 'murtajiz',
+    name: 'Al Murtajiz Travel',
+    purpose: 'Modern travel agency platform with CMS-driven content',
+    tags: ['React', 'Cloudflare', 'Google Sheets CMS'],
+    skills: ['React', 'TailwindCSS', 'Cloudflare Pages', 'Google Sheets API', 'UX Design'],
+    link: 'https://al-murtajiz-travel.pages.dev/',
+    image: 'assets/al-murtajiz-travel.png',
+    accentColor: 'border-emerald-600 text-emerald-600',
+    theme: 'murtajiz'
+  },
+  {
     id: 'bearsplit',
     name: 'BearSplit Waitlist',
     purpose: 'Waitlist app with playful UX & product thinking',
