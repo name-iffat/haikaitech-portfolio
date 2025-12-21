@@ -200,6 +200,12 @@ const SKILL_ICONS: Record<string, string> = {
   'Visual Studio': 'visualstudio',
   'Git': 'git',
   'Excel Automation (VBA)': 'microsoftexcel',
+  'Cloudflare Pages': 'cloudflarepages',
+  'Google Sheets API': 'googlesheets',
+  'UX Research': 'uxpin', // Fallback or related
+  'UX Design': 'figma',
+  'Client-focused Design': 'figma',
+  'UX Sensitivity': 'figma'
 };
 
 // Helper to get skill icon
@@ -208,12 +214,16 @@ export const getSkillIcon = (skill: string) => {
   const iconColor = "475569"; // Slate-600
 
   if (slug) {
-    return <img src={`https://cdn.simpleicons.org/${slug}/${iconColor}`} alt="" className="w-3.5 h-3.5" />;
+    // Using a more robust simple icons provider
+    return <img src={`https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/${slug}.svg`}
+      alt=""
+      className="w-3.5 h-3.5 opacity-60 group-hover/skill:opacity-100 transition-opacity"
+      style={{ filter: 'invert(36%) sepia(18%) saturate(795%) hue-rotate(180deg) brightness(92%) contrast(88%)' }} />;
   }
 
   // Lucide Fallbacks for skills without Simple Icons or generic concepts
   if (skill.includes('SQL') || skill.includes('Data')) return <Database className="w-3.5 h-3.5" />;
-  if (skill.includes('UI') || skill.includes('Layout')) return <Layout className="w-3.5 h-3.5" />;
+  if (skill.includes('UI') || skill.includes('UX') || skill.includes('Layout') || skill.includes('Design')) return <Layout className="w-3.5 h-3.5" />;
   if (skill.includes('IoT') || skill.includes('Hardware')) return <Cpu className="w-3.5 h-3.5" />;
   if (skill.includes('AR') || skill.includes('Vuforia')) return <Box className="w-3.5 h-3.5" />;
   if (skill.includes('Prototyping')) return <PenTool className="w-3.5 h-3.5" />;
